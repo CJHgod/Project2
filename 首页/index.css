@@ -266,6 +266,14 @@
   position: relative;
 }
 
+.box .section3 .se3_top ul li a:hover {
+  color: blue;
+}
+
+.box .section3 .se3_top ul li:first-child a {
+  color: blue;
+}
+
 .box .section3 .se3_top ul li::after {
   content: "";
   display: block;
@@ -291,7 +299,16 @@
   font-size: 16px;
 }
 
-.box .section3 .context .img_left {
+.box .section3 .se3_box {
+  border: 2px solid blue;
+}
+
+.box .section3 .se3_box .context {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .img_left {
   width: 180px;
   height: 430px;
   float: left;
@@ -299,15 +316,184 @@
   box-sizing: border-box;
 }
 
-.box .section3 .context .se3_img {
+.box .section3 .se3_box .context .img_left ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box .section3 .se3_box .context .img_left ul li {
+  height: 46px;
+  border: 1px solid black;
+  line-height: 46px;
+  text-align: center;
+}
+
+.box .section3 .se3_box .context .list_context {
+  width: 1000px;
+  height: 430px;
+  background: orange;
+  position: absolute;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .list_context .li_left {
+  width: 748px;
+  height: 100%;
+  float: left;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode {
+  padding: 15px 20px;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode p {
+  color: green;
+  font-weight: bold;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode dl {
+  width: 680px;
+  border-bottom: 1px solid black;
+  padding: 5px 0 20px 0;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode dl dd {
+  float: left;
+  padding-right: 15px;
+  border-right: 1px solid black;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode2_flex {
+  padding: 10px 40px 10px 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode2_flex .mode2 {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode2_flex .mode2 p {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode2_flex .mode2 dl {
+  border: 1px solid black;
+}
+
+.box .section3 .se3_box .context .list_context .li_left .mode2_flex .mode2 dl dd {
+  float: left;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 1px solid black;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.box .section3 .se3_box .context .list_context .li_right {
+  float: right;
+}
+
+.box .section3 .se3_box .context .list_context .li_right div {
+  width: 250px;
+  height: 50%;
+  border: 1px solid black;
+}
+
+.box .section3 .se3_box .context .se3_img {
   float: left;
 }
 
-.box .section3 .context .img_right {
+.box .section3 .se3_box .context .img_right {
   width: 240px;
   height: 430px;
   float: left;
-  background: skyblue;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center {
+  width: 230px;
+  margin: 0 auto;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .top_char {
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 25px;
+  line-height: 40px;
+  text-align: center;
+  background: url(./images/icon3.png) no-repeat 3% center #ccc;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .top_char span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center img {
+  text-align: center;
+  width: 100%;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img {
+  height: 114px;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img ul {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img ul li {
+  padding: 3px 0;
+  height: 30px;
+  margin-right: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img .ul_context {
+  height: 84px;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img .ul_context p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img .ul_context .flex1 {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img .ul_context .flex1 dl dt {
+  margin: 0 auto;
+  width: 41px;
+  height: 41px;
+  background: url(./images/serIcoB.png) no-repeat;
+}
+
+.box .section3 .se3_box .context .img_right .imgr_center .bottom_img .ul_context .flex1 dl dd {
+  margin-top: 5px;
+  font-size: 15px;
 }
 
 .center {
