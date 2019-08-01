@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../jquery-3.4.1.js"></script>
+    <script src="./数据/indexData.js"></script>
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="section1">
+            <div class="center">
+                <div class="user_list clearfix">
+                    <div class="s1_left">
+                        <span>欢迎进入金象网，</span>
+                        <div class="hover1">
+                            <p><a href="">欢迎进入我的金象网</a></p>
+                            <span style="float: left"><a href="">积分</a></span>
+                            <span style="float: right"><a href="">收藏夹</a></span>
+                        </div>
+                        <a href="">登录</a>
+                        <span>/</span>
+                        <a href="">注册</a>
+                    </div>
+                    <div class="s1_right">
+                        <ul class="ul1">
+                            <li class="li1">
+                                <a href=""
+                                    style="background: url(./images/icon1.png) no-repeat center left; padding-left: 22px; "
+                                    class="a1">购物车</a>
+                            </li>
+                            <li class="li1"><a href="" class="a1">我的订单</a></li>
+                            <li class="li1 li2">
+                                <a href=""
+                                    style="background: url(./images/icon2.png) no-repeat 88% center;padding-right: 25px;"
+                                    class="a1">个人中心</a>
+                                <div class="hover2">
+                                    <a href="">我的优惠券</a>
+                                    <a href="">我的收藏夹</a>
+                                    <a href="">我的评论</a>
+                                    <a href="">会员说明</a>
+
+                                </div>
+                            </li>
+                            <li class="li1 li3">
+                                <a href="" class="a1"
+                                    style="background: url(./images/icon2.png) no-repeat 88% center;padding-right: 25px;">关注金象网</a>
+                                <div class="hover3">
+                                    <img src="./images/wylyCode.jpg" alt="">
+                                    <p>关注金象网</p>
+                                    <p>微信公众号</p>
+                                </div>
+                            </li>
+                            <li class="li1 li4"><a href="" class="a1"
+                                    style="background: url(./images/icon2.png) no-repeat 92% center;padding-right: 20px;">客户服务</a>
+                                <div class="hover4">
+                                    <a href=""> 在线客服</a>
+                                    <a href="">帮助中心</a>
+                                    <a href="">售后服务</a>
+                                    <a href="">常见问题</a>
+                                    <a href="">投诉与建议</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section2">
+            <div class="center">
+                <div class="topimg">
+                    <!-- <img src="./images/wfy2.jpg" alt=""> -->
+                </div>
+                <div class="banner">
+                    <div class="b1">
+                        <h1>金象网</h1>
+                        <p>互联网药品交易服务资格证书编号：津C20140001</p>
+                    </div>
+                    <div class="b2">
+                        <div style="display: flex;">
+                            <input type="text">
+                            <span>搜索</s pan>
+                        </div>
+                        <ul>
+                            <!-- <li><a href="">动态数据</a></li> -->
+                            <!-- <li><a href="">动态数据</a></li> -->
+                            <!-- <li><a href="">动态数据</a></li> -->
+                            <!-- <li><a href="">动态数据</a></li> -->
+                            <!-- <li><a href="">动态数据</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="b3">
+                        <div class="b3_b">
+                            <img src="./images/car.png" alt="">
+                            <p>订单查询</p>
+                        </div>
+                        <h3>
+                            <img src="./images/icon1.png">
+                            <span>购物车</span>
+                            <span>0</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section3">
+            <div class="center">
+                <div class="se3_top clearfix">
+                    <h2>全部商品分类</h2>
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">快速找药</a></li>
+                        <li><a href="">健康百科</a></li>
+                        <li><a href="">健康大讲堂</a></li>
+                        <li><a href="">专业药师</a></li>
+                        <li><a href="">北京协和维芙雅</a></li>
+                    </ul>
+                    <p>购药热线：400-650-6600</p>
+
+                </div>
+                <div class="context">
+                    <div class="img_left">
+
+                    </div>
+                    <div class="se3_img">
+                        <img src="./images/86vAJm99_L.jpg" alt="">
+                    </div>
+                    <div class="img_right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        $(function () {
+            var obj = new indexManeger(datalist);
+            obj.init();
+        })
+    </script>
+
+</body>
+
+</html>
