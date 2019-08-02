@@ -6,6 +6,7 @@ class indexManeger {
         this.topimg1 = data.topimg;
         this.selectdata = data.selectdata;
         this.selectlist = data.selectlist;//列表数据
+        this.loopImg = data.loopImg;
     }
     section2() {
         //渲染顶图
@@ -45,12 +46,6 @@ class indexManeger {
 
 
                 */
-        $(".img_left ul li span").each((c, elecc) => {
-
-
-
-        });
-
 
 
         //动态渲染分类列表中的数据
@@ -122,15 +117,55 @@ class indexManeger {
                 $(".li_left dl").removeAttr("style");
                 $(".li_left >div").attr("class", "").children().attr("class", "mode clearfix");
             }
-
-
-
         })
+
         //鼠标移出消失
         $(".context ").mouseleave(function () {
             // console.log($(this))
             $(".list_context").css("display", "none");
         });
+
+
+        //定义轮播图功能
+        var loopimgs = this.loopImg.map(ele => {
+            return ` <img src="${ele}" alt="">`
+        }).join("");
+        $(".se3_img").append(loopimgs);//插入图片
+
+        //设置轮播图功能
+        $(".se3_img img").eq(0).css("opacity", "1");
+        $(".se3_img li").eq(0).css("background", "orange");
+        var ind = 1;
+
+        var time = function () {
+            var timers = setInterval(function () {
+                $(".se3_img img").eq(ind).css("opacity", "1").siblings("img").css("opacity", "0");
+                $(".se3_img li").eq(ind).css("background", "orange").siblings("li").css("background", "#CCC");;
+                var imglength = $(".se3_img img").length
+                if (ind == imglength - 1) {
+                    ind = 0;
+                } else {
+                    ind++;
+                }
+            }, 3000);
+            $(".se3_img").mouseenter(function () {
+                clearInterval(timers)
+            })
+
+        }
+        time();//页面刷新就调用
+
+        $(".se3_img li").mouseenter(function () {
+
+            ind = $(this).index();
+            $(".se3_img img").eq(ind).css("opacity", "1").siblings("img").css("opacity", "0");
+            $(".se3_img li").eq(ind).css("background", "orange").siblings("li").css("background", "#CCC");;
+
+        })
+
+        $(".se3_img").mouseleave(function () {
+            time();
+        })
 
 
     }

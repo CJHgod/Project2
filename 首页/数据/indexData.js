@@ -141,7 +141,11 @@ var datalist = {
             ],
             rightimg: ["./images/yg.jpg", "./images/bw.jpg"],
         },
-    ]
+    ],
+
+    //定义轮播图图片
+    loopImg: ["./images/86vAJm99_L.jpg", "./images/a6EfLKDy_L.jpg", , "./images/I9UL5sOu_L.jpg", , "./images/TByXvpz8_L.jpg", , "./images/xJcJywbz_L.jpg",]
+
 }
 
 

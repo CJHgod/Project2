@@ -3,7 +3,7 @@
   border: 1px solid black;
 
   .section1 {
-    background: #ccc;
+    background: #f3f3f3;
 
     .user_list {
       .s1_left {
@@ -51,6 +51,7 @@
             float: left;
             //   padding: 5px 17px;
             position: relative;
+            font-size: 14px;
             .a1 {
               display: block;
               padding: 5px 17px;
@@ -473,7 +474,33 @@
           }
         }
         .se3_img {
+          width: 760px;
+          height: 430px;
           float: left;
+          position: relative;
+          img {
+            position: absolute;
+            z-index: -2;
+            transition: all 2s;
+            opacity: 0;
+          }
+          ul {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            li {
+              float: left;
+              width: 20px;
+              height: 20px;
+              background: #ccc;
+              border-radius: 50%;
+              margin: 0 10px;
+              transition: all 1s;
+              cursor: pointer;
+            }
+          }
         }
         .img_right {
           width: 240px;

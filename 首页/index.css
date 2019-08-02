@@ -4,7 +4,7 @@
 }
 
 .box .section1 {
-  background: #ccc;
+  background: #f3f3f3;
 }
 
 .box .section1 .user_list .s1_left {
@@ -55,6 +55,7 @@
 .box .section1 .user_list .s1_right .ul1 .li1 {
   float: left;
   position: relative;
+  font-size: 14px;
 }
 
 .box .section1 .user_list .s1_right .ul1 .li1 .a1 {
@@ -492,7 +493,36 @@
 }
 
 .box .section3 .se3_box .context .se3_img {
+  width: 760px;
+  height: 430px;
   float: left;
+  position: relative;
+}
+
+.box .section3 .se3_box .context .se3_img img {
+  position: absolute;
+  z-index: -2;
+  transition: all 2s;
+  opacity: 0;
+}
+
+.box .section3 .se3_box .context .se3_img ul {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.box .section3 .se3_box .context .se3_img ul li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: all 1s;
+  cursor: pointer;
 }
 
 .box .section3 .se3_box .context .img_right {
