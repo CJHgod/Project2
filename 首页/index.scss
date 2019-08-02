@@ -300,11 +300,85 @@
             flex-direction: column;
 
             li {
-              height: 46px;
-              border: 1px solid black;
-              line-height: 46px;
+              height: 47.5px;
+              // border: 1px solid black;
+              background: #4496ee;
+              line-height: 47.5px;
               text-align: center;
+              position: relative;
+
+              a {
+                color: white;
+              }
+              span {
+                display: block;
+                width: 20px;
+                height: 20px;
+                // border: 1px solid black;
+                position: absolute;
+                top: 50%;
+                left: 10%;
+                transform: translateY(-50%);
+              }
             }
+            li:hover {
+              background: white;
+            }
+
+            li:hover a {
+              color: blue;
+            }
+            li:first-child span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -32px;
+            }
+            li:nth-child(2) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -62px;
+            }
+            li:nth-child(3) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -93px;
+            }
+            li:nth-child(4) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -132px;
+            }
+            li:nth-child(5) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -171px;
+            }
+            li:nth-child(6) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -213px;
+            }
+            li:nth-child(7) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -264px;
+            }
+            li:nth-child(8) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -315px;
+            }
+            li:nth-child(9) span {
+              background: url(./images/iconBase.png);
+              background-position: -58px -366px;
+            }
+            li:hover span {
+              background-position-x: -94px;
+            }
+
+            // li:before {
+            //   content: "";
+            //   display: block;
+            //   width: 20px;
+            //   height: 20px;
+            //   border: 1px solid black;
+            //   position: absolute;
+            //   top: 50%;
+            //   left: 10%;
+            //   transform: translateY(-50%);
+            // }
           }
         }
         .list_context {
@@ -321,6 +395,8 @@
             height: 100%;
             float: left;
             border: 1px solid black;
+            display: none;
+
             // background: black;
             box-sizing: border-box;
             .mode {
@@ -335,16 +411,19 @@
                 padding: 5px 0 20px 0;
                 dd {
                   float: left;
-                  padding-right: 15px;
+                  padding-right: 10px;
                   border-right: 1px solid black;
                   margin-top: 10px;
-                  margin-right: 15px;
-                  font-size: 14px;
+                  margin-right: 10px;
+                  font-size: 13px;
+                }
+                dd:last-child {
+                  border-right: none;
                 }
               }
             }
             .mode2_flex {
-              padding: 10px 40px 10px 10px;
+              padding: 10px 30px 10px 10px;
               height: 100%;
 
               box-sizing: border-box;
@@ -352,10 +431,10 @@
 
               .mode2 {
                 float: left;
-                width: 200px;
+                width: 215px;
                 margin-right: 20px;
                 margin-bottom: 10px;
-                border: 1px solid black;
+                // border: 1px solid black;
 
                 p {
                   color: green;
@@ -364,7 +443,7 @@
                   margin-bottom: 6px;
                 }
                 dl {
-                  border: 1px solid black;
+                  // border: 1px solid black;
 
                   dd {
                     float: left;
@@ -372,7 +451,10 @@
                     padding-right: 5px;
                     border-right: 1px solid black;
                     margin-top: 5px;
-                    font-size: 14px;
+                    font-size: 12px;
+                  }
+                  dd:last-child {
+                    border-right: none;
                   }
                 }
               }
@@ -381,11 +463,12 @@
           .li_right {
             float: right;
             // box-sizing: border-box;
-
-            div {
-              width: 250px;
-              height: 50%;
-              border: 1px solid black;
+            .imr {
+              div {
+                width: 250px;
+                height: 50%;
+                border: 1px solid black;
+              }
             }
           }
         }
