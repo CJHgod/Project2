@@ -7,6 +7,7 @@ class indexManeger {
         this.selectdata = data.selectdata;
         this.selectlist = data.selectlist;//列表数据
         this.loopImg = data.loopImg;
+        this.shoplist = data.shoplist;
     }
     section2() {
         //渲染页面广告图
@@ -201,9 +202,31 @@ class indexManeger {
 
     }
 
+
+    section6() {
+
+        var res = ``;
+        this.shoplist.map(ele => {
+            ele.datas.context.map((eles, i) => {
+                // console.log(eles, i)
+                if (i == 5) {
+                    res += ` <li><a>${eles}</a></li></ul><ul>`
+                } else {
+                    res += `<li><a>${eles}</a></li>`;
+                }
+
+            });
+            res = `  <div class="se6_context clearfix"><ul>${res}</ul></div>`;
+            console.log(res);
+            // return `${ele.title}`;
+        });
+        $(".se6_left").append(res);
+    }
+
     init() {
         this.section2();
         this.section3();
         this.section4();
+        this.section6();
     }
 }

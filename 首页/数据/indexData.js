@@ -144,28 +144,20 @@ var datalist = {
     ],
 
     //定义轮播图图片
-    loopImg: ["./images/86vAJm99_L.jpg", "./images/a6EfLKDy_L.jpg", "./images/I9UL5sOu_L.jpg", "./images/TByXvpz8_L.jpg", "./images/xJcJywbz_L.jpg",]
+    loopImg: ["./images/86vAJm99_L.jpg", "./images/a6EfLKDy_L.jpg", "./images/I9UL5sOu_L.jpg", "./images/TByXvpz8_L.jpg", "./images/xJcJywbz_L.jpg",],
 
+    //定义商品详情分类数据
+    shoplist: [
+        {
+            title: "中西药品",
+            img: ["./images/i9DIXNrU_O.jpg", "./images/fSU0gKbf_O.jpg", "./images/rw3BqvnZ_O.jpg",],
+            datas: {
+                context: [" 高血压", " 糖尿病", "精神疾病", "  感冒发烧", "皮肤疾病", " 五官疾病", " 眼科疾病", "乙肝", "骨科疾病", " 支气管炎", " 心脑血管", "补血益气",],
+                img: ["./images/baier.jpg", "./images/tongrentang.jpg", "./images/baiyunshan.jpg", "./images/yangsen.jpg", "./images/guangyuyuanguoyao.jpg", "./images/shenwei.jpg", "./images/999.jpg", "./images/huqingyutang.jpg", "./images/yunnanbaiyao.jpg", "./images/sanjing.jpg", "./images/dongeejiao.jpg", "./images/gelansushike.jpg",],
+            },
+        },
+
+    ],
 }
 
 
-
-
-// var arr = [];
-// var o = {};
-// for (var i = 0; i < dd.length; i++) {
-
-//     var acc = Array.from(n4).map(element => {
-//         return element.innerHTML;
-//     }).join(",");
-//     // console.log("[" + `${acc}` + "]")
-// }
-
-
-// Array.from(dd).map(element => {
-//     // console.log(element.children);//dd标签  //下面子标签
-//     var arr = Array.from(element.children).map(ele => {
-//         return `"${ele.innerHTML}"`;
-//     }).join(",");
-//     console.log("[" + `${arr}` + "]")
-// });
