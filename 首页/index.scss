@@ -293,8 +293,9 @@
           width: 180px;
           height: 430px;
           float: left;
-          border: 1px solid black;
+          // border: 1px solid black;
           box-sizing: border-box;
+
           ul {
             height: 100%;
             display: flex;
@@ -386,8 +387,9 @@
           width: 1000px;
           height: 430px;
           // border: 1px solid black;
-          background: orange;
+          background: white;
           position: absolute;
+          z-index: 1;
           right: 0;
           display: none;
           box-sizing: border-box;
@@ -395,7 +397,7 @@
             width: 748px;
             height: 100%;
             float: left;
-            border: 1px solid black;
+            // border: 1px solid black;
             display: none;
 
             // background: black;
@@ -468,7 +470,8 @@
               div {
                 width: 250px;
                 height: 50%;
-                border: 1px solid black;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
               }
             }
           }
@@ -478,6 +481,7 @@
           height: 430px;
           float: left;
           position: relative;
+          // z-index: -3;
           img {
             position: absolute;
             z-index: -2;
@@ -489,7 +493,7 @@
             bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
-            z-index: -1;
+            // z-index: -1;
             li {
               float: left;
               width: 20px;
@@ -572,6 +576,130 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+  .section4 {
+    .se4_box {
+      height: 240px;
+      background: url(./images/dailyBg.jpg) no-repeat;
+      .se4_left {
+        width: 190px;
+        text-align: center;
+        padding-top: 50px;
+        p {
+          font-size: 22px;
+          color: skyblue;
+          font-weight: bold;
+        }
+        h3 {
+          font-size: 12px;
+          color: rgb(82, 179, 218);
+          padding: 10px 0;
+        }
+        .times {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            width: 30px;
+            height: 40px;
+            background: white;
+            line-height: 40px;
+          }
+          span {
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+    .topimg {
+      height: 100px;
+      // border: 1px solid black;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .se4_context {
+      height: 210px;
+
+      h2 {
+        margin-top: 13px;
+        width: 120px;
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        background: url(./images/iconHome.png) no-repeat;
+        background-position: 0px -184px;
+      }
+      .se4_img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .section5 {
+    .se5_one {
+      .first {
+        float: left;
+        width: 250px;
+        height: 270px;
+        background: #ccc;
+        overflow: hidden;
+        padding: 10px;
+        box-sizing: border-box;
+        p {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 6px 0;
+        }
+        h3 {
+          font-size: 14px;
+          color: red;
+          margin-bottom: 8px;
+        }
+        div {
+          width: 200px;
+          height: 180px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .first_right {
+        float: left;
+
+        width: 930px;
+        height: 270px;
+        background: skyblue;
+        .fr_list {
+          width: 310px;
+          height: 135px;
+          background: orange;
+          .fr_text {
+            width: 200px;
+            height: 110px;
+            background: green;
+            float: left;
+          }
+          div {
+            width: 110px;
+            float: left;
+
+            height: 110px;
+            img {
+              width: 100%;
+              height: 100%;
             }
           }
         }

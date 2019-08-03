@@ -9,8 +9,11 @@ class indexManeger {
         this.loopImg = data.loopImg;
     }
     section2() {
-        //渲染顶图
-        $(".topimg").append(`<img src="${this.topimg1}" alt="">`);
+        //渲染页面广告图
+        $(".topimg").eq(0).append(`<img src="${this.topimg1[0]}" alt="">`);
+        $(".topimg").eq(1).append(`<img src="${this.topimg1[1]}" alt="">`);
+        $(".topimg").eq(2).append(`<img src="${this.topimg1[2]}" alt="">`);
+
         //渲染搜索框热门内容
         var lidatas = this.selectdata.map((ele) => {
             return ` <li><a href="">${ele}</a></li>`
@@ -127,16 +130,21 @@ class indexManeger {
 
 
         //定义轮播图功能
+        var ul_li = this.loopImg.map(ele => {
+            return ` <li></li>`       //定义下面点数
+        }).join("");
+        $(".se3_img ul").append(ul_li);
+
         var loopimgs = this.loopImg.map(ele => {
             return ` <img src="${ele}" alt="">`
         }).join("");
         $(".se3_img").append(loopimgs);//插入图片
 
+
         //设置轮播图功能
         $(".se3_img img").eq(0).css("opacity", "1");
         $(".se3_img li").eq(0).css("background", "orange");
         var ind = 1;
-
         var time = function () {
             var timers = setInterval(function () {
                 $(".se3_img img").eq(ind).css("opacity", "1").siblings("img").css("opacity", "0");
@@ -154,14 +162,14 @@ class indexManeger {
 
         }
         time();//页面刷新就调用
-
+        // console.log($(".se3_img li"))
         $(".se3_img li").mouseenter(function () {
-
+            // console.log($(this))
             ind = $(this).index();
             $(".se3_img img").eq(ind).css("opacity", "1").siblings("img").css("opacity", "0");
             $(".se3_img li").eq(ind).css("background", "orange").siblings("li").css("background", "#CCC");;
 
-        })
+        });
 
         $(".se3_img").mouseleave(function () {
             time();
@@ -169,9 +177,33 @@ class indexManeger {
 
 
     }
+
+
+    section4() {
+        //定时器
+        setInterval(function () {
+            var nowTimes = new Date();
+            var years = nowTimes.getFullYear();
+            var months = nowTimes.getMonth() + 1;
+            var date = nowTimes.getDate();
+            var target = new Date(`${years}-${months}-${date} 23:59:59`);
+            var offset = Math.round((target.getTime() - nowTimes.getTime()) / 1000);
+            var h = Math.floor(offset / 60 / 60 % 24);
+            var m = Math.floor(offset / 60 % 60);
+            var s = Math.floor(offset % 60);
+            $(".section4 .times .hours").html(h);
+            $(".section4 .times .minute").html(m);
+            $(".section4 .times .second").html(s);
+        }, 1000);
+
+
+
+
+    }
+
     init() {
         this.section2();
         this.section3();
-
+        this.section4();
     }
 }

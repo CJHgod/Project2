@@ -1,6 +1,6 @@
 var datalist = {
-    //首页最上面一张图片
-    topimg: "./images/wfy2.jpg",
+    //定义页面广告图片
+    topimg: ["./images/wfy2.jpg", "./images/zf3yue.jpg", "./images/3mkouzhao.jpg"],
     //定义搜索框热门数据
     selectdata: ["口罩", "希爱力", "阿胶", "万艾可", "安宫牛黄丸", "定坤丹", "龟龄集", "保法止", "奥泰灵"],
 
@@ -144,7 +144,7 @@ var datalist = {
     ],
 
     //定义轮播图图片
-    loopImg: ["./images/86vAJm99_L.jpg", "./images/a6EfLKDy_L.jpg", , "./images/I9UL5sOu_L.jpg", , "./images/TByXvpz8_L.jpg", , "./images/xJcJywbz_L.jpg",]
+    loopImg: ["./images/86vAJm99_L.jpg", "./images/a6EfLKDy_L.jpg", "./images/I9UL5sOu_L.jpg", "./images/TByXvpz8_L.jpg", "./images/xJcJywbz_L.jpg",]
 
 }
 
