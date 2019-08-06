@@ -1,0 +1,259 @@
+.box {
+  width: 1280px;
+  border: 1px solid black;
+
+  .section1 {
+    background: #f3f3f3;
+
+    .user_list {
+      .s1_left {
+        float: left;
+        padding: 5px 15px;
+        font-size: 14px;
+        border: 1px solid rgb(121, 121, 121);
+        background: white;
+        position: relative;
+        .hover1 {
+          position: absolute;
+          left: 0;
+          bottom: -130;
+          width: 250px;
+          height: 130px;
+          border: 1px solid #ccc;
+          background: white;
+          text-align: center;
+          display: none;
+          p {
+            border: 1px solid black;
+            height: 90px;
+            line-height: 90px;
+          }
+          span {
+            display: block;
+            width: 50%;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            background: rgb(255, 164, 112);
+          }
+        }
+      }
+      .s1_left:hover .hover1 {
+        display: block;
+      }
+      .s1_right {
+        float: right;
+        //   height: 30px;
+        //   line-height: 30px;
+        .ul1 {
+          .li1 {
+            float: left;
+            //   padding: 5px 17px;
+            position: relative;
+            font-size: 14px;
+            .a1 {
+              display: block;
+              padding: 5px 17px;
+              color: rgb(95, 95, 95);
+            }
+            .hover2 {
+              width: 200px;
+              height: 100px;
+              border: 1px solid #ccc;
+              background: white;
+              position: absolute;
+              right: 0;
+              display: none;
+              a {
+                font-size: 14px;
+                display: block;
+                padding: 15px 10px;
+                width: 50%;
+                box-sizing: border-box;
+                float: left;
+                //   border: 1px solid black;
+              }
+              a:hover {
+                color: blue;
+              }
+            }
+            .hover3 {
+              width: 100%;
+              height: 180px;
+              border: 1px solid #ccc;
+              background: white;
+              position: absolute;
+              padding: 10px;
+              box-sizing: border-box;
+              text-align: center;
+              display: none;
+              img {
+                width: 100%;
+              }
+            }
+            .hover4 {
+              width: 200px;
+              height: 130px;
+              border: 1px solid #ccc;
+              background: white;
+              display: none;
+              position: absolute;
+              right: 0;
+              a {
+                display: block;
+                padding: 10px 15px;
+                float: left;
+              }
+              a:hover {
+                color: blue;
+              }
+            }
+          }
+          .li4:hover .hover4 {
+            display: block;
+          }
+          .li3:hover .hover3 {
+            display: block;
+          }
+          .li2:hover .hover2 {
+            display: block;
+          }
+          .li1:hover .a1 {
+            color: blue;
+          }
+          .li1:after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 20px;
+            background: rgb(136, 136, 136);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          .li1:last-child:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section2 {
+    .topimg {
+      height: 100px;
+      // border: 1px solid black;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .banner {
+      height: 130px;
+      // border: 1px solid black;
+      .back {
+        float: right;
+        width: 600px;
+        height: 130px;
+        position: relative;
+        top: 40%;
+
+        .bc1 {
+          width: 198px;
+          height: 20px;
+          position: absolute;
+          z-index: 1;
+          background: url(./images/gouwujindu.jpg) no-repeat;
+        }
+        .bc2 {
+          width: 600px;
+          height: 20px;
+          position: absolute;
+
+          background: url(./images/gouwujindu.jpg) no-repeat 0 -22px;
+        }
+      }
+      .b1 {
+        float: left;
+        height: 100%;
+        h1 {
+          width: 230px;
+          height: 100px;
+          // border: 1px solid black;
+          text-indent: -999px;
+          background: url(../首页/images/logo.png) no-repeat center center;
+        }
+        p {
+          height: 30px;
+          font-size: 12px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .section3 {
+    ul {
+      margin: 5px 0;
+      border-top: 1px dotted #ccc;
+      border-bottom: 1px dotted #ccc;
+
+      li {
+        float: left;
+        padding: 10px 0;
+        text-align: center;
+      }
+    }
+    .shops {
+      height: 140px;
+      background: pink;
+      div {
+        float: left;
+      }
+      .checkbox {
+        width: 60px;
+        height: 140px;
+        position: relative;
+        input {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .shopName {
+        width: 300px;
+        height: 140px;
+        font-size: 13px;
+        position: relative;
+        .dflex {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          img {
+            width: 70px;
+            border: 1px solid #ccc;
+          }
+          p {
+            padding: 5px;
+            box-sizing: border-box;
+          }
+        }
+      }
+      .shopNum {
+        width: 100px;
+        height: 140px;
+        line-height: 100px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.center {
+  width: 1180px;
+  border: 1px solid orange;
+  margin: 0 auto;
+}

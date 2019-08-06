@@ -610,6 +610,7 @@
   width: 190px;
   text-align: center;
   padding-top: 50px;
+  float: left;
 }
 
 .box .section4 .se4_box .se4_left p {
@@ -639,6 +640,58 @@
 
 .box .section4 .se4_box .se4_left .times span {
   padding: 0 5px;
+}
+
+.box .section4 .se4_box .se4_right {
+  width: 990px;
+  height: 240px;
+  float: left;
+}
+
+.box .section4 .se4_box .se4_right .shops {
+  width: 290px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float: left;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_left {
+  width: 180px;
+  height: 120px;
+  float: left;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_left p {
+  margin: 5px;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_left h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  color: red;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_left span {
+  display: inline-block;
+  padding: 5px 4px;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_left .spancss {
+  background: orange;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_right {
+  width: 110px;
+  float: left;
+}
+
+.box .section4 .se4_box .se4_right .shops .s_right img {
+  width: 100%;
 }
 
 .box .section4 .topimg {
@@ -766,14 +819,18 @@
   right: 10px;
 }
 
-.box .section6 .se6_left {
+.box .section6 .se6_box {
+  margin: 10px 0;
+}
+
+.box .section6 .se6_box .se6_left {
   width: 360px;
   height: 580px;
   box-sizing: border-box;
   float: left;
 }
 
-.box .section6 .se6_left h2 {
+.box .section6 .se6_box .se6_left h2 {
   width: 100px;
   height: 40px;
   background: orange;
@@ -783,24 +840,24 @@
   color: white;
 }
 
-.box .section6 .se6_left .se6_img {
+.box .section6 .se6_box .se6_left .se6_img {
   width: 360px;
   height: 220px;
   position: relative;
   overflow: hidden;
 }
 
-.box .section6 .se6_left .se6_img .loop_border {
+.box .section6 .se6_box .se6_left .se6_img .loop_border {
   position: absolute;
   white-space: nowrap;
   font-size: 0;
 }
 
-.box .section6 .se6_left .se6_img .loop_border img {
+.box .section6 .se6_box .se6_left .se6_img .loop_border img {
   display: inline-block;
 }
 
-.box .section6 .se6_left .se6_context ul {
+.box .section6 .se6_box .se6_left .se6_context ul {
   width: 180px;
   height: 100px;
   padding: 10px;
@@ -809,38 +866,226 @@
   border-right: 1px solid #ccc;
 }
 
-.box .section6 .se6_left .se6_context ul li {
+.box .section6 .se6_box .se6_left .se6_context ul li {
   text-align: center;
   float: left;
   width: 50%;
   height: 30px;
   line-height: 30px;
+  font-size: 13px;
 }
 
-.box .section6 .se6_left .se6_icon ul {
+.box .section6 .se6_box .se6_left .se6_icon ul {
   padding-top: 20px;
   width: 180px;
   height: 220px;
-  background: orange;
   float: left;
   border-right: 1px solid #ccc;
   box-sizing: border-box;
 }
 
-.box .section6 .se6_left .se6_icon ul li {
+.box .section6 .se6_box .se6_left .se6_icon ul li {
   float: left;
   margin: 10px 4px;
 }
 
-.box .section6 .se6_left .se6_icon ul li img {
+.box .section6 .se6_box .se6_left .se6_icon ul li img {
   width: 80px;
 }
 
-.box .section6 .se6_right {
+.box .section6 .se6_box .se6_right {
   width: 820px;
   height: 580px;
-  background: skyblue;
   float: left;
+}
+
+.box .section6 .se6_box .se6_right .tab ul {
+  float: right;
+}
+
+.box .section6 .se6_box .se6_right .tab ul li {
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  float: left;
+  border: 1px solid blue;
+  border-bottom: 1px solid white;
+  font-size: 13px;
+}
+
+.box .section6 .se6_box .se6_right .shop_context {
+  width: 820px;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops {
+  border: 1px solid blue;
+  display: none;
+  cursor: pointer;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 540px;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul li {
+  width: 25%;
+  height: 50%;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul li img {
+  width: 100%;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul li p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul li span {
+  display: inline-block;
+  padding: 5px;
+}
+
+.box .section6 .se6_box .se6_right .shop_context .shops ul li:hover {
+  box-shadow: 0px 0px 3px 5px #ccc;
+}
+
+.box .section7 {
+  margin-top: 50px;
+}
+
+.box .section7 .se7_top h3 {
+  height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  background: #ccc;
+}
+
+.box .section7 .se7_top ul {
+  border-top: 1px solid green;
+  padding: 10px;
+}
+
+.box .section7 .se7_top ul li {
+  float: left;
+  padding: 10px 20px;
+}
+
+.box .section7 .se7_bottomTop {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box .section7 .se7_bottomTop .se7_icon .se7_img {
+  float: left;
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+  background: url("./images/slogenIcoB.png");
+}
+
+.box .section7 .se7_bottomTop .se7_icon .se7_font {
+  float: left;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box .section7 .se7_bottomTop .se7_icon:nth-child(2) .se7_img {
+  background: url("./images/slogenIcoB.png");
+  background-position: -72px 0;
+}
+
+.box .section7 .se7_bottomTop .se7_icon:nth-child(3) .se7_img {
+  background: url("./images/slogenIcoB.png");
+  background-position: -144px 0;
+}
+
+.box .section7 .se7_bottomTop .se7_icon:nth-child(4) .se7_img {
+  background: url("./images/slogenIcoB.png");
+  background-position: -216px 0;
+}
+
+.box .section7 .se7_bottomContext {
+  margin-top: 40px;
+}
+
+.box .section7 .se7_bottomContext .se7_text ul {
+  float: left;
+}
+
+.box .section7 .se7_bottomContext .se7_text ul li {
+  float: left;
+  margin: 0 40px;
+}
+
+.box .section7 .se7_bottomContext .se7_text ul li p {
+  padding: 10px;
+}
+
+.box .section7 .se7_bottomContext .se7_text ul li .onep {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.box .section7 .se7_bottomContext .se7_text .code {
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.box .section7 .se7_bottomContext .se7_text .code p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.box .section7 .se7_bottomContext .se7_text .code .codeImg {
+  width: 140px;
+  height: 140px;
+}
+
+.box .section7 .se7_bottomContext .se7_text .code .codeImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.box .section7 .se7_tes {
+  background: #ccc;
+}
+
+.box .section7 .se7_tes ul {
+  width: 900px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.box .section7 .se7_tes ul li {
+  float: left;
+  padding: 0 10px;
+}
+
+.box .section7 .floor {
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  width: 600px;
+  background: url("./images/sm_124x47.png") no-repeat right center;
+}
+
+.box .section7 .floor p {
+  font-size: 13px;
+  padding: 10px;
 }
 
 .center {

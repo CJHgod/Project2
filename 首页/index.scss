@@ -590,6 +590,7 @@
         width: 190px;
         text-align: center;
         padding-top: 50px;
+        float: left;
         p {
           font-size: 22px;
           color: skyblue;
@@ -612,6 +613,50 @@
           }
           span {
             padding: 0 5px;
+          }
+        }
+      }
+      .se4_right {
+        width: 990px;
+        height: 240px;
+        // background:black;
+        float: left;
+        .shops {
+          width: 290px;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          float: left;
+          .s_left {
+            width: 180px;
+            height: 120px;
+            float: left;
+            p {
+              margin: 5px;
+            }
+            h3 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+              color: red;
+            }
+            span {
+              display: inline-block;
+              padding: 5px 4px;
+            }
+            .spancss {
+              background: orange;
+              border-radius: 10px;
+              margin-left: 20px;
+              margin-top: 15px;
+            }
+          }
+          .s_right {
+            width: 110px;
+            float: left;
+            img {
+              width: 100%;
+            }
           }
         }
       }
@@ -686,7 +731,6 @@
       }
       .first_right {
         float: left;
-
         width: 930px;
         height: 270px;
 
@@ -701,6 +745,7 @@
           border-right: 1px solid black;
           box-sizing: border-box;
           margin: 3px 0;
+
           .fr_text {
             width: 200px;
             height: 110px;
@@ -735,81 +780,266 @@
   }
 
   .section6 {
-    .se6_left {
-      width: 360px;
-      height: 580px;
-      // border: 1px solid black;
-      box-sizing: border-box;
+    .se6_box {
+      margin: 10px 0;
 
-      float: left;
-      h2 {
-        width: 100px;
-        height: 40px;
-        background: orange;
-        line-height: 40px;
-        text-align: center;
-        font-weight: bold;
-        color: white;
-      }
-      .se6_img {
+      .se6_left {
         width: 360px;
-        height: 220px;
-        position: relative; //下面的浮起来了所以想要隐藏，父元素也要浮起来
-        overflow: hidden;
-        .loop_border {
-          position: absolute;
-          white-space: nowrap;
-          font-size: 0;
-
-          img {
-            display: inline-block;
-          }
-        }
-      }
-      .se6_context {
-        ul {
-          width: 180px;
-          height: 100px;
-          padding: 10px;
-          box-sizing: border-box;
-          float: left;
-          border-right: 1px solid #ccc;
-          li {
-            text-align: center;
-            float: left;
-            width: 50%;
-            height: 30px;
-            line-height: 30px;
-          }
-        }
-      }
-      .se6_icon {
-        ul {
-          padding-top: 20px;
-          width: 180px;
-          height: 220px;
+        height: 580px;
+        // border: 1px solid black;
+        box-sizing: border-box;
+        // border:1px solid blue;
+        float: left;
+        h2 {
+          width: 100px;
+          height: 40px;
           background: orange;
+          line-height: 40px;
+          text-align: center;
+          font-weight: bold;
+          color: white;
+        }
+        .se6_img {
+          width: 360px;
+          height: 220px;
+          position: relative; //下面的浮起来了所以想要隐藏，父元素也要浮起来
+          overflow: hidden;
+          .loop_border {
+            position: absolute;
+            white-space: nowrap;
+            font-size: 0;
+
+            // transition: all 1s;
+
+            img {
+              // display:block;
+              // position: absolute;
+              display: inline-block;
+            }
+          }
+        }
+        .se6_context {
+          ul {
+            width: 180px;
+            height: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+            border-right: 1px solid #ccc;
+            li {
+              text-align: center;
+              float: left;
+              width: 50%;
+              height: 30px;
+              line-height: 30px;
+              font-size: 13px;
+            }
+          }
+        }
+        .se6_icon {
+          ul {
+            padding-top: 20px;
+            width: 180px;
+            height: 220px;
+            // background: orange;
+            float: left;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+
+            li {
+              float: left;
+
+              margin: 10px 4px;
+              img {
+                width: 80px;
+              }
+            }
+          }
+        }
+      }
+
+      .se6_right {
+        width: 820px;
+        height: 580px;
+        // background: skyblue;
+        float: left;
+        .tab {
+          ul {
+            float: right;
+            li {
+              height: 40px;
+              padding: 0 20px;
+              line-height: 40px;
+              float: left;
+              border: 1px solid blue;
+              border-bottom: 1px solid white;
+
+              font-size: 13px;
+            }
+          }
+        }
+        .shop_context {
+          width: 820px;
+          .shops {
+            border: 1px solid blue;
+            display: none;
+            cursor: pointer;
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              height: 540px;
+              li {
+                width: 25%;
+                height: 50%;
+                text-align: center;
+                padding: 5px;
+                box-sizing: border-box;
+                img {
+                  width: 100%;
+                }
+                p {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  margin-top: 10px;
+                }
+                span {
+                  display: inline-block;
+                  padding: 5px;
+                }
+              }
+              li:hover {
+                box-shadow: 0px 0px 3px 5px #ccc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section7 {
+    margin-top: 50px;
+    .se7_top {
+      h3 {
+        height: 30px;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 30px;
+        background: #ccc;
+      }
+      ul {
+        border-top: 1px solid green;
+        padding: 10px;
+        li {
           float: left;
-          border-right: 1px solid #ccc;
-          box-sizing: border-box;
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    .se7_bottomTop {
+      // background: #ccc;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      .se7_icon {
+        .se7_img {
+          float: left;
+          margin-right: 20px;
+          width: 70px;
+          height: 70px;
+          background: url("./images/slogenIcoB.png");
+        }
+        .se7_font {
+          float: left;
+          height: 70px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      .se7_icon:nth-child(2) .se7_img {
+        background: url("./images/slogenIcoB.png");
+
+        background-position: -72px 0;
+      }
+      .se7_icon:nth-child(3) .se7_img {
+        background: url("./images/slogenIcoB.png");
+
+        background-position: -144px 0;
+      }
+      .se7_icon:nth-child(4) .se7_img {
+        background: url("./images/slogenIcoB.png");
+
+        background-position: -216px 0;
+      }
+    }
+    .se7_bottomContext {
+      margin-top: 40px;
+      .se7_text {
+        ul {
+          float: left;
 
           li {
             float: left;
+            margin: 0 40px;
+            p {
+              padding: 10px;
+            }
+            .onep {
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+        .code {
+          float: left;
+          text-align: center;
+          margin-top: 20px;
+          margin-left: 50px;
+          p {
+            font-size: 25px;
+            font-weight: bold;
+          }
+          .codeImg {
+            width: 140px;
+            height: 140px;
 
-            margin: 10px 4px;
             img {
-              width: 80px;
+              width: 100%;
+              height: 100%;
             }
           }
         }
       }
     }
 
-    .se6_right {
-      width: 820px;
-      height: 580px;
-      background: skyblue;
-      float: left;
+    .se7_tes {
+      background: #ccc;
+      ul {
+        width: 900px;
+        padding-top: 40px;
+        margin: 0 auto;
+        li {
+          float: left;
+
+          padding: 0 10px;
+        }
+      }
+    }
+    .floor {
+      margin: 40px auto 0;
+      padding-bottom: 40px;
+
+      width: 600px;
+      background: url("./images/sm_124x47.png") no-repeat right center;
+      p {
+        font-size: 13px;
+        padding: 10px;
+      }
     }
   }
 }
