@@ -451,6 +451,8 @@
               padding: 15px 25px;
               border: 1px solid #ccc;
               background: orangered;
+              cursor: pointer;
+              user-select: none;
             }
           }
           .phone {

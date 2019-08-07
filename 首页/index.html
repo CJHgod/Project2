@@ -658,20 +658,20 @@
     <script>
         $(function () {
 
-            // $.ajax({
-            //     type:"post",
-            //     url:"./数据/首页商品数据.php",
-            //     dataType:"json",
-            //     success:function(response){
-            //         // console.log(response)
-            //         var obj = new indexManeger(response);
-            //         obj.init();
-            //     }
+            $.ajax({
+                type: "post",
+                url: "./数据/首页商品数据.php",
+                dataType: "json",
+                success: function (response) {
+                    // console.log(response)
+                    var obj = new indexManeger(response);
+                    obj.init();
+                }
 
-            // })
+            })
 
-            var obj = new indexManeger(datalist);
-            obj.init();
+            // var obj = new indexManeger(datalist);
+            // obj.init();
 
         })
     </script>

@@ -42,7 +42,7 @@ class indexManeger {
                     zon += ($(".sum span").eq(i).text().slice(1)) * 1;
                 }
                 console.log(zon)
-          
+
 
                 $(".rightss a").text("¥" + zon);
             })
@@ -68,7 +68,7 @@ class indexManeger {
                     zon += ($(".sum span").eq(i).text().slice(1)) * 1;
                 }
                 console.log(zon)
-          
+
 
                 $(".rightss a").text("¥" + zon);
 
@@ -89,8 +89,71 @@ class indexManeger {
     }
 
 
+    //获取cookie并渲染标签
+    getcookie() {
+
+        //先判断页面有多少个cookie,  在动态渲染多少次商品
+        var long = Cookie.getKeys().length;
+        var res = ``;
+        var acc = [];
+        for (var i = 1; i <= long; i++) {
+
+            acc.push(Cookie.getItem(i).split(","));
+
+        }
+        // console.log(acc)
+        var acs = [];
+        acc.forEach(eles => {
+            // console.log(eles)
+            var o = {};
+            eles.forEach((ele, i) => {
+                // console.log(ele, i)
+
+                var arr4 = ele.split(":");
+                // console.log(arr4)
+                if (arr4.length == 3) {
+                    o[arr4[0]] = `${arr4[1]}:${arr4[2]}`
+                } else {
+                    o[arr4[0]] = arr4[1];
+
+                }
+                // o[arr4[0]] = arr4[1];
+            })
+
+            acs.push(o);
+        })
+        console.log(acs)
+        //acs就是每个对象   思路 遍历渲染
+
+
+
+        //将cooki转成对象
+        // console.log(Cookie.getItem("1").split(","))
+        var arr = Cookie.getItem("1").split(",");
+        // console.log(arr)
+
+        var o = {};
+        arr.forEach(ele => {
+            var arr2 = ele.split(":")
+            if (arr2.length == 3) {
+                o[arr2[0]] = `${arr2[1]}:${arr2[2]}`
+            } else {
+                o[arr2[0]] = arr2[1];
+
+            }
+        })
+        // console.log(o)
+
+
+
+        // console.log(res);
+        $(".section4 .center").append(res)
+    }
+
     init() {
         this.section2();
         this.buyCar();
+        this.getcookie();
+
     }
 }

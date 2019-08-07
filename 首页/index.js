@@ -406,6 +406,7 @@ class indexManeger {
             // console.log(ele.listsdata)
             var lis = ele.listsdata.map(eles => {
                 var lidata = eles.map(ele => {
+                    // console.log(ele)
                     return ` <li>
                          <img src="${ele.img}" alt="">
                         <p>${ele.shop}</p>
@@ -415,6 +416,7 @@ class indexManeger {
                             <i style="display:none">${ele.iconImg}</i>
                             <h3 style="display:none"> ${ele.sel}</h3>
                             <h5 style="display:none"> ${ele.act}</h5>
+                            <h6 style="display:none">${ele.id}</h6>
                         </h4>
                    
                     </li>`;
@@ -535,10 +537,10 @@ class indexManeger {
             var iconImgs = $(this).find("i").text();
             var selcs = $(this).find("h3").text();
             var act = $(this).find("h5").text();
-
+            var id = $(this).find("h6").text();
             // console.log(act)
             //拼接成查询字符串
-            var str = `imgAddress=${imgAddress}&shopinformation=${shopinformation}&prices=${prices}&prices2=${prices2}&iconImg=${iconImgs}&selects=${selcs}&act=${act}`;
+            var str = `id=${id}&imgAddress=${imgAddress}&shopinformation=${shopinformation}&prices=${prices}&prices2=${prices2}&iconImg=${iconImgs}&selects=${selcs}&act=${act}`;
 
             // console.log(imgAddress, shopinformation, prices, prices2)
             window.open(`http://127.0.0.1/project/%e4%ba%8c%e9%98%b6%e6%ae%b5%e9%a1%b9%e7%9b%ae/%e5%95%86%e5%93%81%e8%af%a6%e6%83%85%e9%a1%b5/page.html?${str}`);

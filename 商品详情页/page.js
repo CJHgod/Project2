@@ -112,6 +112,37 @@ class indexManeger {
                      </div>`;
         $(".left").prepend(imgs);
 
+
+        //渲染商品编号
+        $(".floor p").text("商品编号:" + `${obj.id}`)
+
+
+    }
+
+
+
+    session() {
+        //点击购物车按钮,先获取页面的值
+        $(".buy div").eq(1).click(function () {
+
+            var name = $(".cent p").eq(0).text();
+            var prices = $(".prices span").eq(1).text().slice(1);
+            var num = $(".Num input ").val();
+            var imgadd = $(".img_box img").attr("src");
+            var ids = $(".floor p").text();
+            var reg = /[0-9]+/;
+            var id = ids.match(reg)[0];
+
+            var shops = `name:${name},prices:${prices},num:${num},img:${imgadd}`
+
+            Cookie.setItem(`${id}`, `${shops}`, 1, '/');
+
+            // console.log(name, prices, num, imgadd, id)
+            window.open(`http://127.0.0.1/project/%e4%ba%8c%e9%98%b6%e6%ae%b5%e9%a1%b9%e7%9b%ae/%e8%b4%ad%e7%89%a9%e8%bd%a6%e9%a1%b5%e9%9d%a2/buyCar.html`);
+        })
+
+        // Cookie.setItem("name", "123", 8, '/');
+
     }
 
 
@@ -119,5 +150,7 @@ class indexManeger {
         this.section2();
         this.datas();
         this.section3();
+        this.session();
+
     }
 }

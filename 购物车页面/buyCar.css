@@ -223,22 +223,26 @@
   font-size: 14px;
 }
 
-.box .section3 .shops {
+.box .section4 {
+  margin: 20px 0;
+}
+
+.box .section4 .shops {
   height: 140px;
   background: pink;
 }
 
-.box .section3 .shops div {
+.box .section4 .shops div {
   float: left;
 }
 
-.box .section3 .shops .checkbox {
+.box .section4 .shops .checkbox {
   width: 60px;
   height: 140px;
   position: relative;
 }
 
-.box .section3 .shops .checkbox input {
+.box .section4 .shops .checkbox input {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -247,38 +251,38 @@
   transform: translate(-50%, -50%);
 }
 
-.box .section3 .shops .shopName {
+.box .section4 .shops .shopName {
   width: 300px;
   height: 140px;
   font-size: 13px;
   position: relative;
 }
 
-.box .section3 .shops .shopName .dflex {
+.box .section4 .shops .shopName .dflex {
   display: flex;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.box .section3 .shops .shopName .dflex img {
+.box .section4 .shops .shopName .dflex img {
   width: 70px;
   border: 1px solid #ccc;
 }
 
-.box .section3 .shops .shopName .dflex p {
+.box .section4 .shops .shopName .dflex p {
   padding: 5px;
   box-sizing: border-box;
 }
 
-.box .section3 .shops .shopNum {
+.box .section4 .shops .shopNum {
   width: 100px;
   height: 140px;
   line-height: 100px;
   text-align: center;
 }
 
-.box .section3 .shops .factory {
+.box .section4 .shops .factory {
   padding: 0 10px;
   box-sizing: border-box;
   height: 140px;
@@ -288,7 +292,7 @@
   text-align: center;
 }
 
-.box .section3 .shops .prices {
+.box .section4 .shops .prices {
   padding: 0 10px;
   box-sizing: border-box;
   height: 140px;
@@ -298,25 +302,25 @@
   text-align: center;
 }
 
-.box .section3 .shops .num {
+.box .section4 .shops .num {
   width: 90px;
   height: 140px;
   position: relative;
 }
 
-.box .section3 .shops .num .num_box {
+.box .section4 .shops .num .num_box {
   position: absolute;
   top: 25%;
 }
 
-.box .section3 .shops .num .num_box input {
+.box .section4 .shops .num .num_box input {
   width: 50px;
   height: 30px;
   float: left;
   text-align: center;
 }
 
-.box .section3 .shops .num .num_box span {
+.box .section4 .shops .num .num_box span {
   width: 15px;
   height: 30px;
   float: left;
@@ -327,7 +331,7 @@
   user-select: none;
 }
 
-.box .section3 .shops .sum {
+.box .section4 .shops .sum {
   padding: 0 10px;
   box-sizing: border-box;
   height: 140px;
@@ -337,7 +341,7 @@
   text-align: center;
 }
 
-.box .section3 .shops .del {
+.box .section4 .shops .del {
   padding: 0 10px;
   box-sizing: border-box;
   height: 140px;
@@ -347,18 +351,18 @@
   text-align: center;
 }
 
-.box .section3 .floor {
+.box .section5 .floor {
   height: 80px;
 }
 
-.box .section3 .floor .checkb {
+.box .section5 .floor .checkb {
   height: 80px;
   width: 100px;
   float: left;
   position: relative;
 }
 
-.box .section3 .floor .checkb .cbox {
+.box .section5 .floor .checkb .cbox {
   font-size: 13px;
   position: absolute;
   left: 50%;
@@ -366,7 +370,7 @@
   transform: translate(-50%, -50%);
 }
 
-.box .section3 .floor .bottom .fl_ul p {
+.box .section5 .floor .bottom .fl_ul p {
   float: left;
   height: 80px;
   line-height: 80px;
@@ -374,22 +378,22 @@
   font-size: 14px;
 }
 
-.box .section3 .floor .bottom .rightss {
+.box .section5 .floor .bottom .rightss {
   float: right;
   height: 80px;
   line-height: 80px;
   margin-right: 30px;
 }
 
-.box .section3 .floor .bottom .rightss a {
+.box .section5 .floor .bottom .rightss a {
   color: red;
 }
 
-.box .section3 .but_box {
+.box .section5 .but_box {
   border-top: 1px solid black;
 }
 
-.box .section3 .but_box .but {
+.box .section5 .but_box .but {
   float: right;
   width: 200px;
   height: 50px;
