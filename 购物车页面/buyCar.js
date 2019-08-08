@@ -173,20 +173,21 @@ class indexManeger {
 
         //监听单个单选按钮
         $(".shops .checkbox input").click(function () {
-            var nums = $(this).parents(".checkbox").siblings(".num").find("input").val() * 1;
+            // var nums = $(this).parents(".checkbox").siblings(".num").find("input").val() * 1;
             var sums = $(this).parents(".checkbox").siblings(".sum").find("span").text().slice(1) * 1;
             // console.log(nums, sums)
             // console.log($(this).is(":checked"))
 
             if ($(this).is(":checked") == true) {
                 var nowprices = $(".rightss a").text().slice(1) * 1;
-                nowprices += nums * sums;
+                nowprices += sums;
                 $(".rightss a").text(`¥${nowprices}`);
             } else {
                 var nowprices = $(".rightss a").text().slice(1) * 1;
 
-                nowprices -= nums * sums;
-                $(".rightss a").text(`¥${nowprices}`);
+                var nos = nowprices - sums;
+                // console.log(nowprices, nos)
+                $(".rightss a").text(`¥${nos}`);
             }
         });
 
@@ -202,6 +203,8 @@ class indexManeger {
             //怎么设置cookie,就要怎么删，前面加了path，所以删除也要传path,与设置相同
             // Cookie.clear();
             // console.log(23)
+            window.location.reload();
+
         })
 
         //全删功能
