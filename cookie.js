@@ -17,9 +17,11 @@ let Cookie = {
             document.cookie = key + "=" + value;
         }
     },
+
+
     removeItem(key) {
         /* 设置当前Cookie数据的过期时间为前一天 */
-        this.setItem(key, "", -1);
+        this.setItem(key, "", -1, "/");
     },
     getKeys() {
 
@@ -34,7 +36,7 @@ let Cookie = {
     clear() {
         var keys = this.getKeys();
         keys.forEach(element => {
-            this.setItem(element, "", -1);
+            this.setItem(element, "", -1, "/");
         });
     }
 }

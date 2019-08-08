@@ -133,8 +133,8 @@ class indexManeger {
             var reg = /[0-9]+/;
             var id = ids.match(reg)[0];
 
-            var shops = `name:${name},prices:${prices},num:${num},img:${imgadd}`
-
+            var shops = `name:${name},prices:${prices},num:${num},ids:${id},img:${imgadd}`
+            console.log(shops)
             Cookie.setItem(`${id}`, `${shops}`, 1, '/');
 
             // console.log(name, prices, num, imgadd, id)
