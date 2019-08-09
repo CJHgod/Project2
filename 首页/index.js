@@ -40,7 +40,7 @@ class indexManeger {
 
         //动态渲染商品分类列表
         var shoplist = this.selectlist.map(element => {
-            return `  <li><span></span><a href="">${element.title}</a></li>`;
+            return `  <li><span></span><a >${element.title}</a></li>`;
         }).join("");
         $(".img_left ul").append(shoplist);
         /*
@@ -547,6 +547,10 @@ class indexManeger {
         })
     }
 
+
+
+
+
     init() {
         this.section2();
         this.section3();
@@ -554,5 +558,24 @@ class indexManeger {
         this.section5();
         this.section6();
         this.shopEvent();
+
+
     }
 }
+
+
+
+
+//商品列表页   点击分类列表，获取对应的字段，传给第二个页面(由第二个页面发请求，再渲染)
+$(function () {
+    $(".se3_box .img_left ul").on("click", "li", function () {
+        var className = $(this).text();
+        var str = `className=${className}`;
+        window.open(`http://127.0.0.1/project/%e4%ba%8c%e9%98%b6%e6%ae%b5%e9%a1%b9%e7%9b%ae/%e5%95%86%e5%93%81%e5%88%97%e8%a1%a8%e9%a1%b5/shopslist.html?${str}`);
+    })
+
+})
+
+
+
+

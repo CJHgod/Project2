@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="./reg.css">
+    <script src="../jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="center">
+            <div class="topBox">
+                <div class="header clearfix">
+                    <h1>金象网</h1>
+                    <p>Hi，欢迎注册</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="floorBor">
+            <div class="center">
+                <form name="form">
+                    <div class="reg">
+                        <div class="username clearfix">
+                            <span> 用户名:</span>
+                            <input type="text" name="username">
+                            <div class="tips">长度不能小于4位数！</div>
+                        </div>
+
+                        <div class="psw clearfix">
+                            <span>请设置密码:</span>
+                            <input type="password" name="password">
+                            <div class="tips">6-20位字符，必须由字母、数字、和符号两种以上组合！</div>
+                        </div>
+
+                        <div class="psw2 clearfix">
+                            <span> 请确认密码:</span>
+                            <input type="password">
+                            <div class="tips">再次验证输入的密码</div>
+                        </div>
+
+                        <div class="phone clearfix">
+                            <span> 验证手机:</span>
+                            <input type="text" name="phoneNum">
+                            <div class="tips">输入的手机号码有误</div>
+
+                        </div>
+
+                        <div class="codeBox clearfix">
+                            <span>验证码:</span>
+                            <input type="text">
+                            <div class="codeImg">
+                                <canvas width="80" height="40" id="captcha1"></canvas>
+                            </div>
+                            <a>换一张</a>
+                            <div class="tips">验证码输入有误</div>
+
+                        </div>
+
+
+                        <div class="phoneCode clearfix">
+                            <span> 短信验证码:</span>
+                            <input type="text">
+                            <div class="getButton">获取验证码</div>
+                            <div class="tips">请输入验证码</div>
+                        </div>
+                </form>
+                <div class="check">
+                    <input type="checkbox" class="checkBox">
+                    <i>我已阅读并同意</i>
+                    <a href="#">《金象网用户注册协议》</a>
+                </div>
+
+
+                <div class="regButton">立即注册</div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="../captcha.js"></script>
+    <script src="./数据/reg.js">  </script>
+
+
+
+
+
+
+</body>
+
+</html>

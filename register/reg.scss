@@ -1,0 +1,148 @@
+.box {
+  background: #ccc;
+  height: 800px;
+  .topBox {
+    .header {
+      //   height: 120px;
+      line-height: 120px;
+      h1 {
+        height: 120px;
+        width: 208px;
+        background: url(./images/logo1.png) no-repeat center;
+        text-indent: -999px;
+        float: left;
+      }
+      p {
+        margin-left: 50px;
+        float: left;
+        font-size: 25px;
+      }
+    }
+  }
+
+  .floorBor {
+    margin-top: 40px;
+    // background: white;
+
+    .reg {
+      background: white;
+      padding: 40px;
+      input {
+        height: 40px;
+        width: 270px;
+        // display: block;
+        border: 1px solid #ccc;
+        float: left;
+        font-size: 18px;
+      }
+      span {
+        font-size: 20px;
+        display: block;
+        width: 200px;
+        height: 40px;
+        text-align: right;
+        float: left;
+        line-height: 40px;
+        padding-right: 30px;
+        box-sizing: border-box;
+      }
+      .username,
+      .psw,
+      .psw2,
+      .phone,
+      .codeBox,
+      .phoneCode {
+        margin: 20px 0;
+        .tips {
+          height: 40px;
+          float: left;
+          line-height: 40px;
+          margin-left: 20px;
+          border: 1px solid palevioletred;
+          padding: 0 5px;
+          box-sizing: border-box;
+          color: red;
+          display: none;
+        }
+      }
+
+      .codeBox {
+        input {
+          width: 120px;
+        }
+        .codeImg {
+          width: 80px;
+          height: 40px;
+          border: 1px solid black;
+          margin: 0 10px;
+          float: left;
+        }
+        a {
+          display: block;
+          width: 50px;
+          height: 40px;
+          float: left;
+          line-height: 40px;
+          color: blue;
+          cursor: pointer;
+        }
+        a:hover {
+          color: red;
+        }
+      }
+
+      .phoneCode {
+        input {
+          width: 120px;
+        }
+        .getButton {
+          width: 100px;
+          text-align: center;
+          line-height: 40px;
+          height: 40px;
+          border: 1px solid black;
+          float: left;
+          cursor: pointer;
+          margin: 0 20px;
+        }
+      }
+      .check {
+        width: 400px;
+        margin-left: 200px;
+        .checkBox {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          margin-top: 7px;
+          margin-right: 10px;
+        }
+        i {
+          width: 120px;
+          height: 30px;
+          line-height: 30px;
+
+          font-size: 16px;
+        }
+      }
+
+      .regButton {
+        width: 280px;
+        height: 40px;
+        border: 1px solid orange;
+        margin: 20px 0 20px 200px;
+        color: white;
+        background: orangered;
+        font-weight: bold;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.center {
+  width: 1180px;
+  border: 1px solid orange;
+  margin: 0 auto;
+  //   background: white;
+}

@@ -3,6 +3,107 @@
   background: url(./images/logo.png) no-repeat left center;
 }
 
+.cen {
+  position: relative;
+  margin: 30px 0;
+  .background {
+    a {
+      display: block;
+      height: 400px;
+      background: skyblue;
+      background: url(https://img5.jinxiang.com/special/eoQi/5uP/7g38/RcLgwR7J_L.jpg) no-repeat center;
+      // background-size: cover;
+    }
+  }
+  .loginBox {
+    background: white;
+    width: 500px;
+    height: 500px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    // background: black;
+    border: 1px solid black;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    .header {
+      height: 80px;
+      // border: 1px solid black;
+      line-height: 80px;
+      padding: 0 40px;
+      h2 {
+        float: left;
+        font-size: 24px;
+        color: blue;
+      }
+      p {
+        float: right;
+        font-size: 15px;
+        color: red;
+        a {
+          user-select: none;
+          cursor: pointer;
+        }
+        a:hover {
+          color: blue;
+        }
+      }
+    }
+
+    .loginAct {
+      input {
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+        border: 1px solid #ccc;
+        font-size: 23px;
+      }
+      .code {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .aother {
+          // float: left;
+          width: 200px;
+          border: 1px solid ccc;
+        }
+        .codeImg {
+          height: 50px;
+          width: 100px;
+          // float: left;
+          border: 1px solid black;
+        }
+        .codeTips {
+          width: 80px;
+          height: 50px;
+          // float: right;
+         span{
+           cursor: pointer;
+         }
+         span:hover{
+           color:blue;
+         }
+        }
+      }
+      // padding: 20px;
+    }
+    .button {
+      width: 400px;
+      height: 60px;
+      margin: 10px auto;
+      border-radius: 10px;
+      background: blue;
+      text-align: center;
+      line-height: 60px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      // user-select: none;
+    }
+  }
+}
+
 .center {
   width: 1180px;
   border: 1px solid orange;

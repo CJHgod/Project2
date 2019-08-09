@@ -236,17 +236,32 @@ class indexManeger {
     getcookie() {
 
         //先判断页面有多少个cookie,  在动态渲染多少次商品
-        var long = Cookie.getKeys().length;
-        // console.log(Cookie.getItem(1))
+        // var long = Cookie.getKeys().length;
+        var arrs = Cookie.getKeys();
+        var arrsReg = /[0-9]{1,2}/;
+        var temparr = [];
+        arrs.forEach(ele => {
+            if (arrsReg.test(ele) == true) {
+                temparr.push(ele);
+            }
 
+        })
+
+        var long = temparr.length;
+        // console.log(Cookie.getItem(1))
+        console.log(temparr)
 
         var acc = [];
-        for (var i = 1; i <= long; i++) {
-            // console.log(Cookie.getKeys(0))
-            if (Cookie.getKeys(0) == "") {
-                alert("当前没有商品");
-            } else {
-                var arr = Cookie.getKeys();
+
+
+        // console.log(Cookie.getKeys(0))
+        if (long == 0) {
+            alert("当前没有商品");
+            return;
+        } else {
+
+            for (var i = 1; i <= long; i++) {
+                var arr = temparr;
                 var ins = arr[i - 1];
                 // console.log(ins)
                 acc.push(Cookie.getItem(ins).split(","));
