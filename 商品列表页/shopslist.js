@@ -31,12 +31,12 @@ class indexManeger {
             type: "post",
             url: "./数据/indexClass.php",
             dataType: "json",
-            data: `${str}&page=1`,
+            data: `${str}&page=0`,
             success: function (response) {
                 var s_li = response.map(ele => {
                     // console.log(ele)
-                    return `<li>
-                                        <div class="imgBox">
+                    return `<li data-goodsid=${ele.goodsId}>
+                                        <div class="imgBox" >
                                             <img src="${ele.img}" alt="">
     
                                         </div>
@@ -123,7 +123,7 @@ $(function () {
             $.ajax({
                 type: "post",
                 url: "./数据/indexClass.php",
-                data: `${str}&page=1`,
+                data: `${str}&page=0`,
                 dataType: "json",
                 success: function (response1) {
                     label(response1);
@@ -150,6 +150,12 @@ $(function () {
         })
     })
 
+    //跳转购物车页面
+    // console.log($(this).parents("li").data("goodsid")) 大坑，页面的属性只能用小写，设置时要注意，否则坑死你
+    $(".s_box ").on("click", "a", function () {
+        console.log($(this).parents("li").data("goodsid"));//拿goodid去数据库查，然后插入到购物车的数据表
+    })
+
 
 
 
@@ -166,7 +172,7 @@ $(function () {
                                 <div class="font_box">${ele.shopname}</div>
                                 <div class="li_floorBox clearfix">
                                     <span>-</span>
-                                    <input type="text">
+                                    <input type="text" value=1>
                                     <span>+</span>
                                     <a>加入购物车</a>
                                 </div>

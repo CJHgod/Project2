@@ -142,7 +142,7 @@ $(function () {
 
         } else {
             flag4 = true;
-            $(".psw input").siblings("div").css("display", "none")
+            $(this).siblings("div").css("display", "none")
             $(this).css("boxShadow", "none")
 
         }
@@ -223,13 +223,13 @@ $(function () {
                     type: "post",
                     url: "./数据/reg.php",
                     data: datas,
-                    dataType:"json",
+                    dataType: "json",
                     success: function (response) {
-                        if(response.status=="success"){
+                        if (response.status == "success") {
                             confirm("注册成功!返回登录界面");
-                            window.location.href="http://127.0.0.1/project/%E4%BA%8C%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/login/log.html";
+                            window.location.href = "http://127.0.0.1/project/%E4%BA%8C%E9%98%B6%E6%AE%B5%E9%A1%B9%E7%9B%AE/login/log.html";
                             // confirm() 
-                        }else{
+                        } else {
                             alert("用户名已被注册!");
                         }
                     }
@@ -237,6 +237,7 @@ $(function () {
                 })
 
             } else {
+                alert("页面内容输入有误!")
                 console.log("格式有误")
             }
 

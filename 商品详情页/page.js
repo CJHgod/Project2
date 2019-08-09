@@ -102,8 +102,8 @@ class indexManeger {
         $(".cent").prepend(tis);
 
         //通过obj对象渲染下面页面 (左边图片信息)
-        var imgs = ` <div class="img_box">
-                         <img src="${obj.imgAddress}" alt="">
+        var imgs = ` <div class="img_box" id="img_boxs">
+                         <img src="${obj.imgAddress}"  alt="">
                      </div>
                      <div class="min_img ">
                          <ul class="clearfix">
@@ -142,7 +142,6 @@ class indexManeger {
         })
 
         // Cookie.setItem("name", "123", 8, '/');
-
     }
 
 
@@ -152,5 +151,7 @@ class indexManeger {
         this.section3();
         this.session();
 
+
     }
 }
+
