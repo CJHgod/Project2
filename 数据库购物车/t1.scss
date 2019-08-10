@@ -165,14 +165,14 @@
           height: 20px;
           position: absolute;
           z-index: 1;
-          background: url(./images/gouwujindu.jpg) no-repeat;
+          background: url(../购物车页面/images/gouwujindu.jpg) no-repeat;
         }
         .bc2 {
           width: 600px;
           height: 20px;
           position: absolute;
 
-          background: url(./images/gouwujindu.jpg) no-repeat 0 -22px;
+          background: url(../购物车页面/images/gouwujindu.jpg) no-repeat 0 -22px;
         }
       }
       .b1 {
@@ -209,9 +209,12 @@
   }
   .section4 {
     margin: 20px 0;
+    background: pink;
     .shops {
       height: 140px;
-      background: pink;
+      border: 1px solid black;
+      margin: 10px 0;
+      background: skyblue;
       div {
         float: left;
       }

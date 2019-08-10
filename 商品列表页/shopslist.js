@@ -33,6 +33,7 @@ class indexManeger {
             dataType: "json",
             data: `${str}&page=0`,
             success: function (response) {
+
                 var s_li = response.map(ele => {
                     // console.log(ele)
                     return `<li data-goodsid=${ele.goodsId}>
@@ -73,7 +74,23 @@ class indexManeger {
                 $(".pageBox ul").append(res);
                 $(".pageBox ul li").eq(0).css("border", "1px solid blue");
             }
+        });
+
+        //开始先获取购物车数据，更新个数
+        $.ajax({
+            type: "post",
+            url: "../数据库购物车/数据/updataCar.php",
+            // data:`goodsid=${goodsid}&price=${price}`,
+            dataType: "json",
+            success: function (response) {
+                //    alert("添加成功");
+                //    console.log(response);
+                var o = JSON.parse(response);
+                // console.log(o)
+                $(".banner .b3 span").eq(1).text(o.totalRow);
+            }
         })
+
 
     }
 
@@ -108,7 +125,8 @@ $(function () {
                 success: function (response1) {
                     label(response1);
                 }
-            })
+            });
+
         } else if (ind == 1) {
             $.ajax({
                 type: "post",
@@ -119,6 +137,7 @@ $(function () {
                     label(response1);
                 }
             })
+
         } else {
             $.ajax({
                 type: "post",
@@ -127,6 +146,7 @@ $(function () {
                 dataType: "json",
                 success: function (response1) {
                     label(response1);
+
                 }
             })
         }
@@ -150,11 +170,29 @@ $(function () {
         })
     })
 
+
     //跳转购物车页面
     // console.log($(this).parents("li").data("goodsid")) 大坑，页面的属性只能用小写，设置时要注意，否则坑死你
     $(".s_box ").on("click", "a", function () {
         console.log($(this).parents("li").data("goodsid"));//拿goodid去数据库查，然后插入到购物车的数据表
+        var goodsid = $(this).parents("li").data("goodsid");
+        var price = $(this).parents("li").find("p").text().slice(1) * 1;
+        $.ajax({
+            type: "post",
+            url: "../数据库购物车/数据/addcar.php",
+            data: `goodsid=${goodsid}&price=${price}`,
+            dataType: "json",
+            success: function (response) {
+                console.log(response)
+                //    alert("添加成功");
+                var o = JSON.parse(response);
+                console.log(o);
+                $(".banner .b3 span").eq(1).text(o.totalRow);
+            }
+        })
+
     })
+
 
 
 
@@ -163,7 +201,7 @@ $(function () {
     function label(o) {
         var s_li = o.map(ele => {
             // console.log(ele)
-            return `<li>
+            return `<li data-goodsid=${ele.goodsId}>
                                 <div class="imgBox">
                                     <img src="${ele.img}" alt="">
 
